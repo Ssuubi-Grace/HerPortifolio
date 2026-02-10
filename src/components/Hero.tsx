@@ -22,7 +22,7 @@ const Hero = () => {
                 <div className="order-2 md:order-1 text-center md:text-left">
                     <h2 className="text-primary font-bold tracking-widest uppercase mb-4 flex items-center justify-center md:justify-start gap-4 text-sm font-mono">
                         <span className="h-px w-12 bg-primary"></span>
-                        Hi I'm
+                        👋🏽 Hi I'm
                     </h2>
                     <h1 className="text-7xl md:text-[8rem] font-black mb-8 leading-[0.85] tracking-tighter text-white">
                         Grace<br />

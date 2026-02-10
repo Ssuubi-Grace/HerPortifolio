@@ -27,33 +27,28 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-24 px-4 text-foreground bg-white dark:bg-card/5 relative overflow-hidden border-t border-slate-100 dark:border-white/5">
-            <div className="absolute inset-0 tech-grid-bg opacity-[0.06] pointer-events-none"></div>
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-50 dark:from-transparent to-transparent pointer-events-none"></div>
-
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-gradient text-center">Featured Projects</h2>
+        <section id="projects" className="py-24 px-4 text-foreground bg-white dark:bg-[#020617] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+            <div className="max-w-7xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1e40af] dark:text-blue-400 text-center">Featured Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {projects.map((project, index) => (
-                        <div key={index} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-                            <div className="aspect-video w-full bg-slate-100 dark:bg-gray-800 flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                                <div className="absolute inset-0 tech-grid-bg opacity-10"></div>
-                                <span className="text-slate-400 dark:text-gray-500 font-mono text-sm z-10">[Project Screenshot Placeholder]</span>
+                        <div key={index} className="group relative rounded-[32px] overflow-hidden bg-[#dbeafe] dark:bg-slate-900 border-2 border-blue-200 dark:border-blue-900 shadow-xl hover:shadow-2xl transition-all duration-500">
+                            <div className="aspect-video w-full bg-white dark:bg-gray-800 flex items-center justify-center relative overflow-hidden border-b-2 border-blue-100 dark:border-blue-900">
+                                <span className="text-[#1e40af] dark:text-gray-500 font-mono text-sm z-10">[Project Screenshot Placeholder]</span>
                             </div>
-                            <div className="p-8">
+                            <div className="p-8 text-left">
                                 <div className="flex gap-2 mb-4 flex-wrap">
                                     {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-black uppercase tracking-wider">
+                                        <span key={tag} className="px-3 py-1 bg-[#1e40af] text-white text-xs rounded-full font-black uppercase tracking-wider shadow-sm">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-black mb-4 group-hover:text-primary transition-colors">{project.title}</h3>
-                                <p className="text-muted mb-6 font-medium leading-relaxed">{project.description}</p>
-                                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-background/50 border border-primary/10">
-                                    <p className="text-[10px] font-black text-primary uppercase mb-2 tracking-[0.2em]">Problem Solved</p>
-                                    <p className="text-sm text-foreground/90 italic font-medium">"{project.problem}"</p>
+                                <h3 className="text-2xl font-black mb-4 text-[#000000] dark:text-white group-hover:text-[#1e40af] transition-colors">{project.title}</h3>
+                                <p className="text-[#000000] dark:text-slate-100 mb-6 font-bold leading-relaxed">{project.description}</p>
+                                <div className="p-5 rounded-2xl bg-white dark:bg-background/50 border-2 border-blue-200">
+                                    <p className="text-[10px] font-black text-[#1e40af] uppercase mb-2 tracking-[0.2em]">Problem Solved</p>
+                                    <p className="text-sm text-[#0f172a] dark:text-white italic font-extrabold">"{project.problem}"</p>
                                 </div>
                             </div>
                         </div>
