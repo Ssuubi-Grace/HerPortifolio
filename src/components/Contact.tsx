@@ -5,7 +5,7 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient">Get In Touch</h2>
                 <p className="text-muted text-xl max-w-2xl mx-auto mb-12">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.Please reach out
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-8 mb-16">
