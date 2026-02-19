@@ -20,7 +20,7 @@ const Hero = () => {
 
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
                 <div className="order-2 md:order-1 text-center md:text-left">
-                    <h2 className="text-primary font-bold tracking-widest uppercase mb-4 flex items-center justify-center md:justify-start gap-4 text-sm font-mono">
+                    <h2 className="text-primary font-bold tracking-widest uppercase mb-4 flex items-center justify-center md:justify-start gap-4 text-2xl font-mono">
                         <span className="h-px w-12 bg-primary"></span>
                         👋🏽 Hi I'm
                     </h2>

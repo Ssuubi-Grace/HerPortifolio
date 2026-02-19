@@ -1,3 +1,6 @@
+// Finalized Experience Component
+import React from 'react';
+
 const Experience = () => {
     const experiences = [
         {
@@ -47,8 +50,8 @@ const Experience = () => {
                                     <span className="text-[#1e40af] dark:text-blue-400 font-extrabold tracking-tighter text-lg">{exp.period}</span>
                                 </div>
                                 <div className="hidden md:flex md:col-span-1 justify-center relative h-full">
-                                    <div className="w-4 h-4 rounded-full bg-[#1e40af] z-10 ring-4 ring-blue-100 dark:ring-primary/20"></div>
-                                    <div className="absolute top-4 bottom-0 w-0.5 bg-blue-200 dark:bg-primary/20 -mb-8"></div>
+                                    <div className="w-4 h-4 rounded-full bg-[#1e40af] z-10 ring-4 ring-blue-100 dark:ring-blue-900/40"></div>
+                                    <div className="absolute top-4 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900/40 -mb-8"></div>
                                 </div>
                                 <div className="md:col-span-3 pb-8">
                                     <div className="p-8 rounded-3xl bg-[#dbeafe] dark:bg-slate-900 border-2 border-blue-200 dark:border-blue-900 shadow-xl hover:shadow-2xl transition-all">

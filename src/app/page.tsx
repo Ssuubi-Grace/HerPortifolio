@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Education />
       <Skills />
       <Experience />
-      <CommunityImpact />
       <Projects />
+      <Education />
+      <CommunityImpact />
       <Contact />
     </main>
   );
