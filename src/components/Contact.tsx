@@ -41,7 +41,7 @@ const Contact = () => {
                 <div className="text-center mb-16 space-y-6">
                     <h2 className="text-4xl md:text-5xl font-black text-[#1e40af] dark:text-blue-400">Get in touch</h2>
                     <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto font-medium">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you need a software solution, a professional partnership, or just want to say hi, my inbox is always open.
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you need a software solution, a professional partnership,community impact, or just want to say hi, my inbox is always open.
                     </p>
                 </div>
 
