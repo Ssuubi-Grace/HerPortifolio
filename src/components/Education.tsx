@@ -3,8 +3,8 @@ import React from 'react';
 const Education = () => {
     const educationItems = [
         {
-            degree: 'B.Sc (Hons) in Computer Science',
-            institution: 'KIIT University, India',
+            degree: 'Bachelor of Science (Honors) in Computer Science',
+            institution: 'KIIT University, Bubaneswar, India',
         },
         {
             degree: 'Diploma in Instructor & Technical Teacher Education',
