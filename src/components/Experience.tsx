@@ -7,13 +7,13 @@ const Experience = () => {
             role: 'Software Engineering Apprentice',
             company: 'Refactory Academy',
             period: 'June 2025 - January 2026',
-            description: 'Building full-stack development and professional engineering skills focusing on UI/UX, SOLID principles, TDD, and DevOps practices.',
+            description: 'Built full-stack development and professional engineering skills focusing on UI/UX, SOLID principles, TDD, and DevOps practices.',
         },
         {
             role: 'Systems Developer',
             company: 'Kutya Mukama Nursery & Primary School',
             period: 'August 2024 - January 2025',
-            description: 'Developing and maintaining the School management system.',
+            description: 'Developed and maintained the School management system.',
         },
         {
             role: 'ICT Support Volunteer',
