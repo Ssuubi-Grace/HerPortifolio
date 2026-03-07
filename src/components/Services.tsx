@@ -36,7 +36,7 @@ const Services = () => {
                 <div className="text-center mb-16 px-4">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#1e40af] dark:text-blue-400">What I Do</h2>
                     <p className="text-slate-900 dark:text-slate-200 text-lg max-w-2xl mx-auto font-black italic">
-                        I bridge the gap between complex technology and practical, impactful solutions.
+                        I bridge the gap between complex technology and practical, impactful human centered solutions.
                     </p>
                 </div>
 
