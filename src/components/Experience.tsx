@@ -7,7 +7,7 @@ const Experience = () => {
             role: 'Software Engineering Apprentice',
             company: 'Refactory Academy',
             period: 'June 2025 - January 2026',
-            description: 'Built full-stack development and professional engineering skills focusing on UI/UX, SOLID principles, TDD, and DevOps practices.',
+            description: 'Collaborated in Agile teams to design and develop full-stack applications, translating user requirements into functional digital solutions while contributing to documentation, system improvements, and stakeholder demonstrations.',
         },
         {
             role: 'Systems Developer',
@@ -19,7 +19,7 @@ const Experience = () => {
             role: 'ICT Support Volunteer',
             company: 'Kampala Capital City Authority (KCCA)',
             period: 'Oct 2024 - April 2025',
-            description: 'Resolved hardware/software issues and supported LAN troubleshooting.',
+            description: 'Resolved hardware/software issues and supported LAN troubleshooting. Guided staff on safe use of digital tools and effective system usage.',
         },
         {
             role: 'Web Development Intern',
@@ -36,7 +36,7 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-24 px-4 bg-white dark:bg-[#020617] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+        <section id="experience" className="py-24 px-4 bg-slate-100 dark:bg-[#020617] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
             <div className="max-w-7xl mx-auto relative z-10">
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1e40af] dark:text-blue-400 text-center">Professional Journey</h2>
                 <div className="space-y-8">
@@ -54,13 +54,13 @@ const Experience = () => {
                                     <div className="absolute top-4 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900/40 -mb-8"></div>
                                 </div>
                                 <div className="md:col-span-3 pb-8">
-                                    <div className="p-8 rounded-3xl bg-[#dbeafe] dark:bg-slate-900 border-2 border-blue-200 dark:border-blue-900 shadow-xl hover:shadow-2xl transition-all">
-                                        <h3 className="text-2xl font-black text-[#000000] dark:text-white mb-2">{exp.role}</h3>
-                                        <h4 className="text-[#2563eb] dark:text-blue-400 font-extrabold mb-4 flex items-center gap-2">
+                                    <div className="p-8 rounded-3xl bg-slate-900 border-2 border-blue-900 shadow-xl hover:shadow-2xl transition-all">
+                                        <h3 className="text-2xl font-black text-white mb-2">{exp.role}</h3>
+                                        <h4 className="text-blue-400 font-extrabold mb-4 flex items-center gap-2">
                                             {exp.company}
-                                            <span className="h-1.5 w-1.5 bg-[#1e40af] rounded-full"></span>
+                                            <span className="h-1.5 w-1.5 bg-blue-400 rounded-full"></span>
                                         </h4>
-                                        <p className="text-[#000000] dark:text-slate-100 leading-relaxed font-bold">{exp.description}</p>
+                                        <p className="text-slate-100 leading-relaxed font-bold">{exp.description}</p>
                                     </div>
                                 </div>
                             </div>

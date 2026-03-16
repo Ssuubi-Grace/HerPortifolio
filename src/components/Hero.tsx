@@ -1,8 +1,38 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
+    const [hiVisible, setHiVisible] = useState(false);
+    const [graceVisible, setGraceVisible] = useState(false);
+    const [ssuubiVisible, setSsuubiVisible] = useState(false);
+    const [typedText, setTypedText] = useState('');
+    const [cursorVisible, setCursorVisible] = useState(false);
+    const fullText = 'Software Developer';
+
+    useEffect(() => {
+        // Staggered fall-in: Hi → Grace → Ssuubi
+        const t1 = setTimeout(() => setHiVisible(true), 400);
+        const t2 = setTimeout(() => setGraceVisible(true), 1200);
+        const t3 = setTimeout(() => setSsuubiVisible(true), 2000);
+
+        // Show cursor, then start typewriter after names appear
+        const t4 = setTimeout(() => setCursorVisible(true), 2800);
+        let charIndex = 0;
+        const t5 = setTimeout(() => {
+            const interval = setInterval(() => {
+                charIndex++;
+                setTypedText(fullText.slice(0, charIndex));
+                if (charIndex >= fullText.length) clearInterval(interval);
+            }, 180);
+        }, 3000);
+
+        return () => [t1, t2, t3, t4, t5].forEach(clearTimeout);
+    }, []);
+
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[#020617]">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[#020617] via-[#0c1a3a] to-[#020617] dark:bg-[#020617] dark:bg-none">
             {/* Moving Enhancing Tech Background */}
             <div className="absolute inset-0 -z-10 opacity-40 pointer-events-none overflow-hidden">
                 <Image
@@ -15,26 +45,59 @@ const Hero = () => {
             </div>
 
             {/* Tech Vibe Pattern Overlays */}
-            <div className="absolute inset-0 tech-grid-bg opacity-20 pointer-events-none animate-pan"></div>
+            <div className="absolute inset-0 tech-grid-bg opacity-5 dark:opacity-20 pointer-events-none animate-pan"></div>
             <div className="scanline"></div>
 
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
                 <div className="order-2 md:order-1 text-center md:text-left">
-                    <h2 className="text-primary font-bold tracking-widest uppercase mb-4 flex items-center justify-center md:justify-start gap-4 text-2xl font-mono">
-                        <span className="h-px w-12 bg-primary"></span>
-                        👋🏽 Hi. I'm
+
+                    {/* "Hi. I'm" — falls in */}
+                    <h2
+                        className="text-primary font-bold tracking-widest uppercase mb-4 flex items-center justify-center md:justify-start gap-4 text-2xl font-mono transition-all duration-1000 ease-out"
+                        style={{
+                            opacity: hiVisible ? 1 : 0,
+                            transform: hiVisible ? 'translateY(0)' : 'translateY(-32px)',
+                        }}
+                    >
+                        👋🏽 Hi. I&apos;m
                     </h2>
+
                     <h1 className="text-7xl md:text-[8rem] font-black mb-8 leading-[0.85] tracking-tighter text-white">
-                        Grace<br />
-                        <span className="text-primary">Ssuubi</span>
+                        {/* "Grace" — falls in */}
+                        <span
+                            className="block transition-all duration-1000 ease-out"
+                            style={{
+                                opacity: graceVisible ? 1 : 0,
+                                transform: graceVisible ? 'translateY(0)' : 'translateY(-40px)',
+                            }}
+                        >
+                            Grace
+                        </span>
+                        {/* "Ssuubi" — falls in */}
+                        <span
+                            className="text-primary block transition-all duration-1000 ease-out"
+                            style={{
+                                opacity: ssuubiVisible ? 1 : 0,
+                                transform: ssuubiVisible ? 'translateY(0)' : 'translateY(-40px)',
+                            }}
+                        >
+                            Ssuubi
+                        </span>
                     </h1>
+
+                    {/* Typewriter "Software Developer" */}
                     <div className="flex items-center justify-center md:justify-start gap-6 mb-10">
-                        <div className="h-16 w-1.5 bg-primary rounded-full shadow-[0_0_20px_rgba(37,99,235,0.6)]"></div>
-                        <h3 className="text-4xl md:text-5xl font-black text-slate-400 italic tracking-tight">
-                            Software Developer
+                        {/* The thick vertical line IS the cursor */}
+                        <div
+                            className="h-16 w-1.5 bg-primary rounded-full shadow-[0_0_20px_rgba(37,99,235,0.6)]"
+                            style={{ animation: cursorVisible ? 'blink 1s step-start infinite' : 'none', opacity: cursorVisible ? 1 : 0 }}
+                        ></div>
+                        <h3 className="text-4xl md:text-5xl font-black text-slate-300 italic tracking-tight flex items-center gap-0 min-h-[4rem] flex-wrap justify-center md:justify-start">
+                            {typedText}
                         </h3>
                     </div>
-                    <p className="text-slate-400 text-xl md:text-2xl max-w-xl mx-auto md:mx-0 mb-12 leading-relaxed font-medium">
+
+                    <p className="text-slate-300 text-xl md:text-2xl max-w-xl mx-auto md:mx-0 mb-12 leading-relaxed font-medium">
                         I am a passionate and purpose-driven developer leveraging technology to solve real-world problems.
                         Bridging the gap between engineering principles and modern software solutions.
                     </p>
@@ -49,10 +112,13 @@ const Hero = () => {
                             </svg>
                         </a>
                         <a
-                            href="#contact"
-                            className="px-12 py-5 border-2 border-primary/40 text-white hover:bg-primary/10 rounded-2xl font-black transition-all transform hover:-translate-y-2 text-lg"
+                            href="/documents/Grace Ssuubi._General_Cv..pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-12 py-5 border-2 border-white/40 text-white hover:bg-white/10 rounded-2xl font-black transition-all transform hover:-translate-y-2 text-lg flex items-center gap-3"
                         >
-                            Get in Touch
+                            Download CV
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         </a>
                     </div>
                 </div>

@@ -69,7 +69,7 @@ const Contact = () => {
                         </div>
 
                         {/* Social Media Row */}
-                        <div className="pt-12 border-t border-slate-100 dark:border-white/5">
+                        <div className="pt-12 border-t border-blue-300 dark:border-white/5">
                             <h4 className="text-lg font-black text-blue-600 dark:text-blue-400 mb-6 uppercase tracking-widest">Connect with me</h4>
                             <div className="flex flex-wrap gap-4">
                                 {socials.map((social, index) => (
@@ -156,7 +156,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="mt-24 pt-12 border-t border-slate-100 dark:border-white/5 text-center">
+                <div className="mt-24 pt-12 border-t border-blue-300 dark:border-white/5 text-center">
                     <p className="text-slate-400 font-bold">© {new Date().getFullYear()} Grace Ssuubi. Built with Next.js & Tailwind CSS.</p>
                 </div>
             </div>

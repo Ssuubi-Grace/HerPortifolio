@@ -76,7 +76,7 @@ const Projects = () => {
         ];
 
     return (
-        <section id="projects" className="py-24 px-4 text-foreground bg-white dark:bg-[#020617] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+        <section id="projects" className="py-24 px-4 text-foreground bg-slate-100 dark:bg-[#020617] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col items-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-[#1e40af] dark:text-blue-400 text-center">Explore My Popular Projects</h2>
@@ -85,8 +85,8 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {projects.map((project, index) => (
-                        <div key={index} className="group relative rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
-                            <div className="aspect-[16/11] w-full relative overflow-hidden bg-slate-50 dark:bg-slate-900/80 border-b border-slate-100 dark:border-white/5 p-4 flex items-center justify-center">
+                        <div key={index} className="group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-blue-900/60 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
+                            <div className="aspect-[16/11] w-full relative overflow-hidden bg-slate-900/80 border-b border-white/5 p-4 flex items-center justify-center">
                                 <div className="relative w-full h-full">
                                     <Image
                                         src={project.image}
@@ -102,28 +102,28 @@ const Projects = () => {
                             <div className="p-8 flex-grow">
                                 <div className="flex gap-2 mb-4 flex-wrap">
                                     {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/40 text-[#1e40af] dark:text-blue-300 text-[11px] rounded-lg font-bold uppercase tracking-wider border border-blue-100 dark:border-blue-800">
+                                        <span key={tag} className="px-3 py-1 bg-blue-900/40 text-blue-300 text-[11px] rounded-lg font-bold uppercase tracking-wider border border-blue-800">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-black mb-4 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors tracking-tight">
+                                <h3 className="text-2xl font-black mb-4 text-white group-hover:text-blue-400 transition-colors tracking-tight">
                                     {project.title}
                                 </h3>
-                                <p className="text-slate-600 dark:text-slate-300 mb-8 text-base leading-relaxed">
+                                <p className="text-slate-300 mb-8 text-base leading-relaxed">
                                     {project.description}
                                 </p>
 
-                                <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-white/5 border border-slate-100 dark:border-white/10">
+                                <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <div className="h-2 w-2 rounded-full bg-blue-600 dark:bg-blue-400"></div>
-                                        <p className="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Challenge & Impact</p>
+                                        <div className="h-2 w-2 rounded-full bg-blue-400"></div>
+                                        <p className="text-[11px] font-bold text-blue-400 uppercase tracking-widest">Challenge & Impact</p>
                                     </div>
-                                    <p className={`text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic ${project.link ? 'mb-4' : ''}`}>
+                                    <p className={`text-sm text-slate-300 font-medium leading-relaxed italic ${project.link ? 'mb-4' : ''}`}>
                                         "{project.story}"
                                     </p>
                                     {project.link && (
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 border border-blue-600/20 dark:border-blue-400/20 text-sm font-bold rounded-xl transition-all duration-300 w-fit">
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-400/10 text-blue-400 hover:bg-blue-400 hover:text-slate-900 border border-blue-400/20 text-sm font-bold rounded-xl transition-all duration-300 w-fit">
                                             View live project
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                         </a>

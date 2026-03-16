@@ -92,7 +92,7 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="py-24 px-4 bg-white dark:bg-[#020617] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+        <section id="skills" className="py-24 px-4 bg-slate-100 dark:bg-[#020617] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16 px-4">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#1e40af] dark:text-blue-400">Technical Skills</h2>
@@ -105,13 +105,13 @@ const Skills = () => {
                     {skillGroups.map((group, index) => (
                         <div
                             key={index}
-                            className="p-6 rounded-[24px] bg-blue-100 dark:bg-slate-900 border-2 border-blue-200 dark:border-blue-800 shadow-xl flex flex-col h-full text-left"
+                            className="p-6 rounded-[24px] bg-slate-900 border-2 border-blue-800 shadow-xl flex flex-col h-full text-left"
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-primary border-2 border-blue-100 dark:border-slate-700 shadow-md">
                                     {group.icon}
                                 </div>
-                                <h3 className="text-lg font-black text-slate-950 dark:text-white uppercase tracking-wider">
+                                <h3 className="text-lg font-black text-white uppercase tracking-wider">
                                     {group.category}
                                 </h3>
                             </div>
@@ -120,7 +120,7 @@ const Skills = () => {
                                 {group.items.map((skill, sIndex) => (
                                     <div
                                         key={sIndex}
-                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-blue-900/40 text-slate-950 dark:text-white text-sm font-bold border-2 border-blue-100 dark:border-blue-900/20 shadow-md"
+                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-900/40 text-white text-sm font-bold border-2 border-blue-900/20 shadow-md"
                                     >
                                         <img
                                             src={`https://cdn.simpleicons.org/${skill.logo}`}

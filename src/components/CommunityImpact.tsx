@@ -33,7 +33,7 @@ const CommunityImpact = () => {
     ];
 
     return (
-        <section id="impact" className="py-24 px-4 bg-slate-50 dark:bg-[#010409] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+        <section id="impact" className="py-24 px-4 bg-slate-100 dark:bg-[#010409] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16 px-4">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#1e40af] dark:text-blue-400">Community Impact and Leadership</h2>
@@ -45,30 +45,30 @@ const CommunityImpact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
                     {impacts.map((item, index) => (
                         <div key={index} className="group relative">
-                            <div className="relative h-full bg-blue-100 dark:bg-slate-900 border-2 border-blue-200 dark:border-blue-800 rounded-[30px] p-8 md:p-10 shadow-xl flex flex-col h-full text-left">
+                            <div className="relative h-full bg-slate-900 border-2 border-blue-800 rounded-[30px] p-8 md:p-10 shadow-xl flex flex-col h-full text-left">
                                 <div className="flex flex-col h-full">
                                     <div className="flex items-start justify-between mb-8">
-                                        <div className="p-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-blue-100 dark:border-primary/20 shadow-md">
+                                        <div className="p-4 rounded-2xl bg-slate-800 border-2 border-blue-900 shadow-md">
                                             {item.icon}
                                         </div>
-                                        <span className="text-xs font-black uppercase tracking-widest text-[#1e40af] dark:text-primary bg-white dark:bg-primary/20 px-4 py-2 rounded-xl border-2 border-primary/30 shadow-md">
+                                        <span className="text-xs font-black uppercase tracking-widest text-blue-400 bg-blue-900/40 px-4 py-2 rounded-xl border-2 border-blue-800 shadow-md">
                                             {item.role}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-3xl font-black mb-2 text-slate-950 dark:text-white transition-colors">
+                                    <h3 className="text-3xl font-black mb-2 text-white transition-colors">
                                         {item.title}
                                     </h3>
-                                    <p className="text-[#2563eb] dark:text-blue-400 font-extrabold text-lg mb-6 leading-tight">
+                                    <p className="text-blue-400 font-extrabold text-lg mb-6 leading-tight">
                                         {item.tagline}
                                     </p>
 
-                                    <p className="text-slate-900 dark:text-slate-100 text-lg leading-relaxed mb-8 font-bold">
+                                    <p className="text-slate-200 text-lg leading-relaxed mb-8 font-bold">
                                         {item.description}
                                     </p>
 
-                                    <div className="mt-auto pt-8 border-t-2 border-blue-200 dark:border-border/50">
-                                        <h4 className="text-sm font-black uppercase tracking-wider text-slate-950 dark:text-slate-400 mb-4 flex items-center gap-2">
+                                    <div className="mt-auto pt-8 border-t-2 border-blue-900">
+                                        <h4 className="text-sm font-black uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
                                             <Sparkles className="w-4 h-4 text-primary" />
                                             Impact & Skills
                                         </h4>

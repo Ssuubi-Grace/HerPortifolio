@@ -3,12 +3,12 @@ import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="about" className="py-24 px-4 bg-slate-50 dark:bg-[#010409] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
+        <section id="about" className="py-24 px-4 bg-slate-100 dark:bg-[#010409] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
             {/* Background elements */}
-            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white dark:from-transparent to-transparent pointer-events-none"></div>
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-slate-100 dark:from-transparent to-transparent pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-gradient text-center">About Me</h2>
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1e40af] dark:text-blue-400 text-center">About Me</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-center">
 
@@ -60,18 +60,18 @@ const About = () => {
                         {/* Social Icons row */}
                         <div className="flex flex-wrap gap-5 items-center pt-8 border-t border-border/50">
                             <a href="https://github.com/Ssuubi-Grace" target="_blank" rel="noopener noreferrer"
-                                className="p-3 bg-white dark:bg-card border border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm">
+                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
                                 <Github className="w-5 h-5" />
                             </a>
                             <a href="https://linkedin.com/in/ssuubi-grace" target="_blank" rel="noopener noreferrer"
-                                className="p-3 bg-white dark:bg-card border border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm">
+                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="https://x.com/grace_ssuubi" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-card border border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm">
+                            <a href="https://x.com/grace_ssuubi" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
                                 <Twitter className="w-5 h-5" />
                             </a>
                             <a href="mailto:hopeliz835@gmail.com"
-                                className="p-3 bg-white dark:bg-card border border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm font-bold flex items-center gap-2">
+                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm font-bold flex items-center gap-2 text-slate-300 hover:text-blue-400">
                                 <Mail className="w-5 h-5" />
                             </a>
                         </div>

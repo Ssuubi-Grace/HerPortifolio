@@ -43,7 +43,7 @@ const Services = () => {
     ];
 
     return (
-        <section id="services" className="py-24 px-4 bg-white dark:bg-[#020617] relative overflow-hidden">
+        <section id="services" className="py-24 px-4 bg-slate-100 dark:bg-[#020617] relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16 px-4">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#1e40af] dark:text-blue-400">What I Do</h2>
@@ -56,15 +56,15 @@ const Services = () => {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative p-6 rounded-[24px] bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-blue-800 transition-all duration-300 hover:shadow-2xl shadow-xl flex flex-col min-h-[250px]"
+                            className="group relative p-6 rounded-[24px] bg-slate-900 border-2 border-blue-800 transition-all duration-300 hover:shadow-2xl shadow-xl flex flex-col min-h-[250px]"
                         >
                             <div className="mb-4">
                                 {service.icon}
                             </div>
-                            <h3 className="text-xl font-black mb-3 text-slate-950 dark:text-white">
+                            <h3 className="text-xl font-black mb-3 text-white">
                                 {service.title}
                             </h3>
-                            <p className="text-slate-900 dark:text-slate-100 text-sm leading-relaxed font-medium">
+                            <p className="text-slate-300 text-sm leading-relaxed font-medium">
                                 {service.description}
                             </p>
                         </div>
