@@ -1,64 +1,79 @@
 import Image from 'next/image';
 
 const Projects = () => {
-    const projects = [
-        {
-            title: 'Rugyeyo Farm – Management Web Portal',
-            description: 'A comprehensive financial and administrative system for tracking farm operations, including sales, expenses, employee wages, and task management.',
-            tags: ['React (Vite)', 'Django', 'PostgreSQL'],
-            image: '/projects/rugyeyo-farm.png',
-            story: 'Facing manual and fragmented operations, this centralized portal provides real-time financial visibility. It significantly boosts operational efficiency and offers clearer financial insights for farm administrators.'
-        },
-        {
-            title: 'Rugyeyo Farm – Field Data Mobile App',
-            description: 'An offline-first mobile application featuring QR code scanning for crop traceability, yield recording, and field task management.',
-            tags: ['React Native', 'Django', 'Offline-First'],
-            image: '/projects/rugyeyo-mobile.png',
-            story: 'Designed to solve inaccurate record-keeping in remote areas, this offline-first app features QR scanning for 100% produce traceability from block to dispatch, ensuring data integrity even without constant connectivity.'
-        },
-        {
-            title: 'Rugyeyo Farm – Public Website & Knowledge Hub',
-            description: 'A public-facing platform and CMS designed to showcase sustainability metrics, seasonal progress, and agricultural best practices.',
-            tags: ['React (Vite)', 'Strapi CMS', 'Django'],
-            image: '/projects/rugyeyo-website.png',
-            story: 'This CMS-driven platform showcases the farm\'s sustainability journey, increasing brand visibility and serving as a professional hub for sharing best practices and seasonal progress with global stakeholders.'
-        },
-        {
-            title: 'Seethio – Ethiopia Tourism Platform',
-            description: 'Award-winning tour guiding platform designed to showcase Ethiopia\'s rich culture and history through curated travel experiences.',
-            tags: ['HTML5', 'CSS', 'Bootstrap', 'JavaScript', 'AI Integration'],
-            image: '/projects/seethio.png',
-            story: 'Winner of 1st Place at Africa Agility Hackathon, this project revolutionized culture discovery in Ethiopia. It provides an innovative approach to tourism by connecting visitors with curated cultural experiences.'
-        },
-        {
-            title: 'Doctors Booking App',
-            description: 'A seamless healthcare platform for patient-doctor scheduling, developed to improve access to medical services.',
-            tags: ['FlutterFlow', 'Firebase'],
-            image: '/projects/doctors-booking.png',
-            story: 'Developed to streamline healthcare access, this platform simplifies appointment management for patients and optimizes scheduling workflows for healthcare providers.'
-        },
-        {
-            title: 'School Management System – Kutya Mukama',
-            description: 'A robust administration system for managing pupil records, staff salaries, attendance, and visitor logs.',
-            tags: ['Next.js', 'Supabase', 'React', 'TypeScript'],
-            image: '/projects/school-manager.png',
-            story: 'A robust system for digitizing school administration, improving record accuracy for pupil registration, attendance, and fee tracking at Kutya Mukama Nursery & Primary School.'
-        },
-        {
-            title: 'Bancasure – Agent Management System',
-            description: 'Centralized platform for agent lifecycle management, policy registration, and claims tracking with compliance monitoring.',
-            tags: ['React (Vite)', 'TypeScript', 'Django'],
-            image: '/projects/banksure.png',
-            story: 'A centralized platform for agent lifecycle management, policies, and compliance. It improves transparency and operational efficiency across the bancassurance sector.'
-        },
-        {
-            title: 'Rapid Clean – Laundry Management',
-            description: 'A dedicated system for booking laundry services, managing orders, and tracking financial performance.',
-            tags: ['React', 'Node.js'],
-            image: '/projects/rapid-clean.png',
-            story: 'An automated laundry management system that digitizes order processing and customer communication, reducing manual work and improving turnaround times.'
-        }
-    ];
+    const projects: {
+        title: string;
+        description: string;
+        tags: string[];
+        image: string;
+        story: string;
+        link?: string;
+    }[] = [
+            {
+                title: 'Rugyeyo Farm – Management Web Portal',
+                description: 'A comprehensive financial and administrative system for tracking farm operations, including sales, expenses, employee wages, and task management.',
+                tags: ['React (Vite)', 'Django', 'PostgreSQL'],
+                image: '/projects/rugyeyo-farm.png',
+                story: 'Facing manual and fragmented operations, this centralized portal provides real-time financial visibility. It significantly boosts operational efficiency and offers clearer financial insights for farm administrators.'
+            },
+            {
+                title: 'Rugyeyo Farm – Field Data Mobile App',
+                description: 'An offline-first mobile application featuring QR code scanning for crop traceability, yield recording, and field task management.',
+                tags: ['React Native', 'Django', 'Offline-First'],
+                image: '/projects/rugyeyo-mobile.png',
+                story: 'Designed to solve inaccurate record-keeping in remote areas, this offline-first app features QR scanning for 100% produce traceability from block to dispatch, ensuring data integrity even without constant connectivity.'
+            },
+            {
+                title: 'Rugyeyo Farm – Public Website & Knowledge Hub',
+                description: 'A public-facing platform and CMS designed to showcase sustainability metrics, seasonal progress, and agricultural best practices.',
+                tags: ['React (Vite)', 'Strapi CMS', 'Django'],
+                image: '/projects/rugyeyo-website.png',
+                story: 'This CMS-driven platform showcases the farm\'s sustainability journey, increasing brand visibility and serving as a professional hub for sharing best practices and seasonal progress with global stakeholders.'
+            },
+            {
+                title: 'SheAware – Non-Profit Organization',
+                description: 'A dedicated platform empowering marginalized girls and young women in Uganda with digital literacy, tech skills, and mentorship.',
+                tags: ['Web Development', 'UI/UX Design', 'Social Impact'],
+                image: '/projects/Sheaware landing.jpg',
+                story: 'Designed to bridge the digital divide for underprivileged girls across Uganda, this platform highlights their mission and model while serving as a hub for donations and community outreach.',
+                link: 'https://sheaware.org/'
+            },
+            {
+                title: 'Seethio – Ethiopia Tourism Platform',
+                description: 'Award-winning tour guiding platform designed to showcase Ethiopia\'s rich culture and history through curated travel experiences.',
+                tags: ['HTML5', 'CSS', 'Bootstrap', 'JavaScript', 'AI Integration'],
+                image: '/projects/seethio.png',
+                story: 'Winner of 1st Place at Africa Agility Hackathon, this project revolutionized culture discovery in Ethiopia. It provides an innovative approach to tourism by connecting visitors with curated cultural experiences.'
+            },
+            {
+                title: 'Doctors Booking App',
+                description: 'A seamless healthcare platform for patient-doctor scheduling, developed to improve access to medical services.',
+                tags: ['FlutterFlow', 'Firebase'],
+                image: '/projects/doctors-booking.png',
+                story: 'Developed to streamline healthcare access, this platform simplifies appointment management for patients and optimizes scheduling workflows for healthcare providers.'
+            },
+            {
+                title: 'School Management System – Kutya Mukama',
+                description: 'A robust administration system for managing pupil records, staff salaries, attendance, and visitor logs.',
+                tags: ['Next.js', 'Supabase', 'React', 'TypeScript'],
+                image: '/projects/school-manager.png',
+                story: 'A robust system for digitizing school administration, improving record accuracy for pupil registration, attendance, and fee tracking at Kutya Mukama Nursery & Primary School.'
+            },
+            {
+                title: 'Bancasure – Agent Management System',
+                description: 'Centralized platform for agent lifecycle management, policy registration, and claims tracking with compliance monitoring.',
+                tags: ['React (Vite)', 'TypeScript', 'Django'],
+                image: '/projects/banksure.png',
+                story: 'A centralized platform for agent lifecycle management, policies, and compliance. It improves transparency and operational efficiency across the bancassurance sector.'
+            },
+            {
+                title: 'Rapid Clean – Laundry Management',
+                description: 'A dedicated system for booking laundry services, managing orders, and tracking financial performance.',
+                tags: ['React', 'Node.js'],
+                image: '/projects/rapid-clean.png',
+                story: 'An automated laundry management system that digitizes order processing and customer communication, reducing manual work and improving turnaround times.'
+            }
+        ];
 
     return (
         <section id="projects" className="py-24 px-4 text-foreground bg-white dark:bg-[#020617] relative overflow-hidden border-t border-slate-100 dark:border-white/5">
@@ -104,9 +119,15 @@ const Projects = () => {
                                         <div className="h-2 w-2 rounded-full bg-blue-600 dark:bg-blue-400"></div>
                                         <p className="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Challenge & Impact</p>
                                     </div>
-                                    <p className="text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
+                                    <p className={`text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic ${project.link ? 'mb-4' : ''}`}>
                                         "{project.story}"
                                     </p>
+                                    {project.link && (
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 border border-blue-600/20 dark:border-blue-400/20 text-sm font-bold rounded-xl transition-all duration-300 w-fit">
+                                            View live project
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Laptop, UserCircle2, Binary } from 'lucide-react';
+import { Sparkles, Laptop, UserCircle2, Binary, Users } from 'lucide-react';
 
 const CommunityImpact = () => {
     const impacts = [
@@ -20,6 +20,15 @@ const CommunityImpact = () => {
             skills: ['Mentorship', 'Public speaking', 'Program design', 'Advocacy', 'Leadership'],
             icon: <UserCircle2 className="w-6 h-6 text-[#db2777]" />,
             color: 'from-pink-500/20 to-transparent'
+        },
+        {
+            title: 'SheAware',
+            tagline: 'Bridging the digital divide for underserved girls across Uganda',
+            description: 'Coordinating operations and programs to empower school dropouts, young women in slums, and girls from marginalized rural villages with essential life and technology skills.',
+            role: 'Operations & Programs Coordinator',
+            skills: ['Operations management', 'Program coordination', 'Digital literacy', 'Community outreach', 'Empowerment'],
+            icon: <Users className="w-6 h-6 text-[#10b981]" />,
+            color: 'from-emerald-500/20 to-transparent'
         }
     ];
 

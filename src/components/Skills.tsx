@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Server, Zap, Code2, GitMerge, Palette, Database } from 'lucide-react';
+import { Layout, Server, Zap, Code2, GitMerge, Palette, Database, PieChart } from 'lucide-react';
 
 const Skills = () => {
     const skillGroups = [
@@ -69,11 +69,22 @@ const Skills = () => {
             ]
         },
         {
+            category: 'Data Analytics',
+            icon: <PieChart className="w-5 h-5" />,
+            items: [
+                { name: 'Python', logo: 'python' },
+                { name: 'Pandas', logo: 'pandas' },
+                { name: 'NumPy', logo: 'numpy' },
+                { name: 'Matplotlib', logo: 'matplotlib' },
+                { name: 'Scikit-Learn', logo: 'scikitlearn' },
+                { name: 'Jupyter Notebook', logo: 'jupyter' },
+            ]
+        },
+        {
             category: 'Databases',
             icon: <Database className="w-5 h-5" />,
             items: [
                 { name: 'PostgreSQL', logo: 'postgresql' },
-                { name: 'Supabase', logo: 'supabase' },
                 { name: 'MySQL', logo: 'mysql' },
                 { name: 'Oracle', logo: 'oracle' }
             ]
