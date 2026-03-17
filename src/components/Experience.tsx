@@ -18,8 +18,8 @@ const Experience = () => {
         {
             role: 'ICT Support Volunteer',
             company: 'Kampala Capital City Authority (KCCA)',
-            period: 'Oct 2024 - April 2025',
-            description: 'Resolved hardware/software issues and supported LAN troubleshooting. Guided staff on safe use of digital tools and effective system usage.',
+            period: 'Oct 2024 - Mar 2025',
+            description: 'Provided 1st & 2nd level IT support across departments. Troubleshot hardware, software, and LAN connectivity issues to ensure reliable system performance, while guiding staff on safe digital tool usage.',
         },
         {
             role: 'Web Development Intern',
@@ -28,10 +28,10 @@ const Experience = () => {
             description: 'Completed portfolio projects showcasing frontend skills and remote collaboration.',
         },
         {
-            role: 'Technical Instructor',
+            role: 'Technical Instructor (TVET)',
             company: 'Ntinda Vocational Training Institute',
             period: '2019 - 2021',
-            description: 'Delivered hands-on training and assessment under the BTVET framework.',
+            description: 'Delivered competency-based technical training and practical lessons in the Plumbing Department. Leveraged ICT tools for performance tracking and developed instructional materials for continuous assessment.',
         },
     ];
 
@@ -44,6 +44,7 @@ const Experience = () => {
                         <div
                             key={index}
                             className="relative pl-8 md:pl-0"
+                            style={{ animationDelay: `${index * 300}ms` }}
                         >
                             <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
                                 <div className="md:col-span-1 md:text-right">
@@ -54,7 +55,7 @@ const Experience = () => {
                                     <div className="absolute top-4 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900/40 -mb-8"></div>
                                 </div>
                                 <div className="md:col-span-3 pb-8">
-                                    <div className="p-8 rounded-3xl bg-slate-900 border-2 border-blue-900 shadow-xl hover:shadow-2xl transition-all">
+                                    <div className="p-8 rounded-3xl bg-slate-900 border-2 border-blue-900 shadow-xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary transition-all duration-300 transform">
                                         <h3 className="text-2xl font-black text-white mb-2">{exp.role}</h3>
                                         <h4 className="text-blue-400 font-extrabold mb-4 flex items-center gap-2">
                                             {exp.company}

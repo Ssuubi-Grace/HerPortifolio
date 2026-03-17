@@ -1,28 +1,40 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ThemeToggle } from './ThemeToggle';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
     { name: 'Services', href: '#services' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+      ? 'bg-slate-950/95 text-white shadow-lg backdrop-blur-md border-b border-white/5'
+      : 'glass-effect'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -38,10 +50,10 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-muted hover:text-primary transition-all duration-300 font-bold text-sm uppercase tracking-wider relative group"
+                  className={`${scrolled ? 'text-white hover:text-white/80' : 'text-muted hover:text-primary'} transition-all duration-300 font-bold text-sm uppercase tracking-wider relative group`}
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 ${scrolled ? 'bg-white' : 'bg-primary'} transition-all duration-300 group-hover:w-full`}></span>
                 </Link>
               ))}
             </div>
@@ -53,7 +65,7 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-foreground hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className={`p-2 rounded-md transition-colors ${scrolled ? 'text-white hover:bg-white/10' : 'text-foreground hover:bg-slate-100 dark:hover:bg-slate-800'}`}
               aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>

@@ -39,15 +39,18 @@ const About = () => {
                         <div className="space-y-6 text-slate-600/90 dark:text-blue-100/70 text-lg leading-relaxed mb-10">
                             <p>
                                 <span className="text-foreground dark:text-white font-bold italic">I’m </span>
-                                A software developer on a mission to use technology to empower communities and close digital gaps.
+                                a <span className="text-primary font-bold">software developer</span> with a strong foundation in <span className="text-primary font-bold">IT Support</span>, on a mission to use technology to <span className="text-primary font-bold">empower communities</span> and close digital gaps.
                             </p>
                             <p>
-                                With a foundation in computer science and hands-on experience building full-stack applications <span className="text-foreground dark:text-white font-semibold">(React, Next.js, Django, PostgreSQL)</span>,
-                                I focus on creating practical, user-friendly solutions that solve real problems. My background in water engineering and vocational education shapes my human-centered approach to design. I don’t just build products, I build for people.
+                                With a foundation in <span className="text-primary font-bold">computer science</span> and hands-on experience building <span className="text-primary font-bold">full-stack applications</span>,
+                                I focus on creating <span className="text-primary font-bold">practical, user-friendly solutions</span> that solve real problems. My unique path, from <span className="text-primary font-bold">Water Engineering</span> and <span className="text-primary font-bold">Vocational Instruction</span> to <span className="text-primary font-bold">Software Engineering</span>, shapes my <span className="text-primary font-bold">human-centered approach</span>. I don’t just build products; I build for people.
                             </p>
                             <p>
-                                Beyond development, I’m passionate about digital inclusion and STEM education. I lead community initiatives like <span className="text-secondary font-bold">Digital Kids</span> and <span className="text-secondary font-bold">Girls in STEM</span>,
-                                helping young learners access technology, coding, and safe digital skills. I thrive in collaborative, impact-driven environments and I’m always exploring how emerging tech can serve communities better.
+                                My background in <span className="text-primary font-bold">IT Support</span> gave me a front-row seat to how digital systems fail and how users interact with them. I don't just build apps; I build them with the <span className="text-primary font-bold">mindset of a support professional</span>, ensuring they are <span className="text-primary font-bold">secure, easy to troubleshoot, and built to last</span>.
+                            </p>
+                            <p>
+                                Beyond development, I’m passionate about <span className="text-primary font-bold">digital inclusion</span> and <span className="text-primary font-bold">STEM education</span>. I lead <span className="text-primary font-bold">community initiatives</span> like <span className="text-secondary font-bold">Digital Kids</span> and <span className="text-secondary font-bold">Girls in STEM</span>,
+                                helping young learners access technology, coding, and safe digital skills. I thrive in collaborative, impact-driven environments and I’m always exploring how <span className="text-primary font-bold">emerging technologies</span> can serve communities better.
                             </p>
                             <p>
                                 Looking ahead, I’m working toward a future where individuals, schools, and small businesses across different sectors can access simple, affordable digital solutions and build a strong online presence.
@@ -57,23 +60,32 @@ const About = () => {
                             </p>
                         </div>
 
-                        {/* Social Icons row */}
+                        {/* Languages & Social row */}
                         <div className="flex flex-wrap gap-5 items-center pt-8 border-t border-border/50">
-                            <a href="https://github.com/Ssuubi-Grace" target="_blank" rel="noopener noreferrer"
-                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
-                                <Github className="w-5 h-5" />
-                            </a>
-                            <a href="https://linkedin.com/in/ssuubi-grace" target="_blank" rel="noopener noreferrer"
-                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="https://x.com/grace_ssuubi" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="mailto:hopeliz835@gmail.com"
-                                className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm font-bold flex items-center gap-2 text-slate-300 hover:text-blue-400">
-                                <Mail className="w-5 h-5" />
-                            </a>
+
+                            <div className="flex gap-4">
+                                <a href="https://github.com/Ssuubi-Grace" target="_blank" rel="noopener noreferrer"
+                                    className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
+                                    <Github className="w-5 h-5" />
+                                </a>
+                                <a href="https://linkedin.com/in/ssuubi-grace" target="_blank" rel="noopener noreferrer"
+                                    className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                                <a href="https://x.com/grace_ssuubi" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm text-slate-300 hover:text-blue-400">
+                                    <Twitter className="w-5 h-5" />
+                                </a>
+                                <a href="mailto:hopeliz835@gmail.com"
+                                    className="p-3 bg-slate-900 dark:bg-card border border-blue-800 dark:border-border rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm font-bold flex items-center gap-2 text-slate-300 hover:text-blue-400">
+                                    <Mail className="w-5 h-5" />
+                                </a>
+                            </div>
+
+                            <div className="flex gap-2 items-center mr-4">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-400">Languages:</span>
+                                <span className="px-3 py-1 bg-blue-900/10 text-blue-400 text-xs font-black rounded-lg border border-blue-400/20">English</span>
+                                <span className="px-3 py-1 bg-blue-900/10 text-blue-400 text-xs font-black rounded-lg border border-blue-400/20">Luganda</span>
+                            </div>
                         </div>
                     </div>
 

@@ -9,7 +9,12 @@ const Hero = () => {
     const [ssuubiVisible, setSsuubiVisible] = useState(false);
     const [typedText, setTypedText] = useState('');
     const [cursorVisible, setCursorVisible] = useState(false);
-    const fullText = 'Software Developer';
+    const roles = [
+        'Software Developer',
+        'IT Support Professional',
+        'Digital Community Leader',
+        'Software Developer'
+    ];
 
     useEffect(() => {
         // Staggered fall-in: Hi → Grace → Ssuubi
@@ -19,14 +24,41 @@ const Hero = () => {
 
         // Show cursor, then start typewriter after names appear
         const t4 = setTimeout(() => setCursorVisible(true), 2800);
+
+        let roleIndex = 0;
         let charIndex = 0;
-        const t5 = setTimeout(() => {
-            const interval = setInterval(() => {
-                charIndex++;
-                setTypedText(fullText.slice(0, charIndex));
-                if (charIndex >= fullText.length) clearInterval(interval);
-            }, 180);
-        }, 3000);
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        const handleTyping = () => {
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                setTypedText(currentRole.slice(0, charIndex--));
+                typingSpeed = 50;
+            } else {
+                setTypedText(currentRole.slice(0, charIndex++));
+                typingSpeed = 150;
+            }
+
+            if (!isDeleting && charIndex > currentRole.length) {
+                if (roleIndex === roles.length - 1) {
+                    // Stay on the last role (Software Developer)
+                    return;
+                }
+                isDeleting = true;
+                typingSpeed = 1000; // Pause at end of word
+            } else if (isDeleting && charIndex < 0) {
+                isDeleting = false;
+                roleIndex++;
+                charIndex = 0;
+                typingSpeed = 500; // Pause before next word
+            }
+
+            setTimeout(handleTyping, typingSpeed);
+        };
+
+        const t5 = setTimeout(handleTyping, 3000);
 
         return () => [t1, t2, t3, t4, t5].forEach(clearTimeout);
     }, []);
@@ -98,9 +130,11 @@ const Hero = () => {
                     </div>
 
                     <p className="text-slate-300 text-xl md:text-2xl max-w-xl mx-auto md:mx-0 mb-12 leading-relaxed font-medium">
-                        I am a passionate and purpose-driven developer leveraging technology to solve real-world problems.
-                        Bridging the gap between engineering principles and modern software solutions.
+                        {/* I am a passionate and purpose-driven developer leveraging technology to solve real-world problems.
+                        Bridging the gap between engineering principles and modern software solutions. */}
+                        I am solution-oriented software developer. I build practical digital solutions that help organizations, schools,businesses and communities manage information, improve services, and access technology more effectively.
                     </p>
+
                     <div className="flex flex-wrap justify-center md:justify-start gap-8">
                         <a
                             href="#projects"

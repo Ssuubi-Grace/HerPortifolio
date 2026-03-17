@@ -39,18 +39,18 @@ const Projects = () => {
                 link: 'https://sheaware.org/'
             },
             {
-                title: 'Seethio – Ethiopia Tourism Platform',
+                title: 'Seethio (Tourism Web App) – Africa Agility Hackathon (Winner)',
                 description: 'Award-winning tour guiding platform designed to showcase Ethiopia\'s rich culture and history through curated travel experiences.',
                 tags: ['HTML5', 'CSS', 'Bootstrap', 'JavaScript', 'AI Integration'],
                 image: '/projects/seethio.png',
-                story: 'Winner of 1st Place at Africa Agility Hackathon, this project revolutionized culture discovery in Ethiopia. It provides an innovative approach to tourism by connecting visitors with curated cultural experiences.'
+                story: 'Securing 1st Place at the Africa Agility Girls in Tech Hackathon, Seethio revolutionized cultural tourism in Ethiopia. It connects global travelers with authentic, AI-enhanced curated cultural experiences.'
             },
             {
-                title: 'Doctors Booking App',
+                title: 'Doctors Booking App – Africa\'s Talking Hackathon (1st Runners Up)',
                 description: 'A seamless healthcare platform for patient-doctor scheduling, developed to improve access to medical services.',
                 tags: ['FlutterFlow', 'Firebase'],
                 image: '/projects/doctors-booking.png',
-                story: 'Developed to streamline healthcare access, this platform simplifies appointment management for patients and optimizes scheduling workflows for healthcare providers.'
+                story: 'Taking 1st Runners Up position at Africa\'s Talking Summit Hackathon, this project simplifies healthcare access by bridging the communication gap between patients and specialized medical providers.'
             },
             {
                 title: 'School Management System – Kutya Mukama',
@@ -60,11 +60,11 @@ const Projects = () => {
                 story: 'A robust system for digitizing school administration, improving record accuracy for pupil registration, attendance, and fee tracking at Kutya Mukama Nursery & Primary School.'
             },
             {
-                title: 'Bancasure – Agent Management System',
+                title: 'Bancasure – Agent Management System (GirlCode Hackathon)',
                 description: 'Centralized platform for agent lifecycle management, policy registration, and claims tracking with compliance monitoring.',
                 tags: ['React (Vite)', 'TypeScript', 'Django'],
                 image: '/projects/banksure.png',
-                story: 'A centralized platform for agent lifecycle management, policies, and compliance. It improves transparency and operational efficiency across the bancassurance sector.'
+                story: 'Developed during the GirlCode Hackathon, this system brings transparency to the bancassurance sector by automating agent lifecycles and policy tracking, reducing human error in compliance monitoring.'
             },
             {
                 title: 'Rapid Clean – Laundry Management',
@@ -85,7 +85,7 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {projects.map((project, index) => (
-                        <div key={index} className="group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-blue-900/60 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
+                        <div key={index} className="group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-blue-900/60 shadow-xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary transition-all duration-300 hover:-translate-y-2 flex flex-col">
                             <div className="aspect-[16/11] w-full relative overflow-hidden bg-slate-900/80 border-b border-white/5 p-4 flex items-center justify-center">
                                 <div className="relative w-full h-full">
                                     <Image

@@ -26,7 +26,7 @@ const Education = () => {
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1e40af] dark:text-blue-400 text-center">Education</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationItems.map((edu, index) => (
-                        <div key={index} className="p-8 rounded-[30px] bg-slate-900 border-2 border-blue-900 shadow-xl hover:shadow-2xl transition-all group">
+                        <div key={index} className="p-8 rounded-[30px] bg-slate-900 border-2 border-blue-900 shadow-xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary transition-all duration-300 group cursor-default">
                             <div className="flex flex-col h-full text-left">
                                 <h3 className="text-2xl font-black text-white mb-2">{edu.degree}</h3>
                                 <h4 className="text-blue-400 font-extrabold text-lg mb-6">{edu.institution}</h4>

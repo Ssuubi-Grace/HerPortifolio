@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Server, Zap, Code2, GitMerge, Palette, Database, PieChart } from 'lucide-react';
+import { Layout, Server, Zap, Code2, GitMerge, Palette, Database, PieChart, Users } from 'lucide-react';
 
 const Skills = () => {
     const skillGroups = [
@@ -81,6 +81,26 @@ const Skills = () => {
             ]
         },
         {
+            category: 'IT & Infrastructure',
+            icon: <Zap className="w-5 h-5" />,
+            items: [
+                { name: 'Hardware Troubleshooting', logo: 'intel' },
+                { name: 'LAN Troubleshooting', logo: 'cisco' },
+                { name: 'ICT Support', logo: 'microsoft' },
+                { name: 'Digital Tool Adoption', logo: 'google' }
+            ]
+        },
+        {
+            category: 'Professional Skills',
+            icon: <Users className="w-5 h-5" />,
+            items: [
+                { name: 'Technical Documentation', logo: 'readme' },
+                { name: 'Agile/Scrum', logo: 'jira' },
+                { name: 'Capacity Building', logo: 'googleclassroom' },
+                { name: 'Mentorship', logo: 'github' }
+            ]
+        },
+        {
             category: 'Databases',
             icon: <Database className="w-5 h-5" />,
             items: [
@@ -105,7 +125,7 @@ const Skills = () => {
                     {skillGroups.map((group, index) => (
                         <div
                             key={index}
-                            className="p-6 rounded-[24px] bg-slate-900 border-2 border-blue-800 shadow-xl flex flex-col h-full text-left"
+                            className="p-6 rounded-[24px] bg-slate-900 border-2 border-blue-800 shadow-xl flex flex-col h-full text-left transition-all duration-300 hover:scale-105 hover:border-primary hover:shadow-primary/20"
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-primary border-2 border-blue-100 dark:border-slate-700 shadow-md">

@@ -8,6 +8,8 @@ import Contact from '@/components/Contact';
 import Education from '@/components/Education';
 import CommunityImpact from '@/components/CommunityImpact';
 import Services from '@/components/Services';
+import Research from '@/components/Research';
+import Certifications from '@/components/Certifications';
 
 export default function Home() {
   return (
@@ -17,8 +19,10 @@ export default function Home() {
       <About />
       <Services />
       <Skills />
+      <Certifications />
       <Experience />
       <Projects />
+      <Research />
       <Education />
       <CommunityImpact />
       <Contact />

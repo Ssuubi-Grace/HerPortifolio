@@ -162,3 +162,19 @@ body {
     opacity: 0;
   }
 }
+
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fall-in {
+  animation: fallIn 0.8s ease-out forwards;
+}
