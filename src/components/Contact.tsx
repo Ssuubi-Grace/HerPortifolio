@@ -8,21 +8,24 @@ const Contact = () => {
             title: 'Location',
             value1: 'Gayaza, Kampala,',
             value2: 'Uganda',
-            href: 'https://maps.apple.com/?address=Kampala,Uganda',
+            href1: 'https://maps.apple.com/?address=Gayaza,Kampala,Uganda',
+            href2: 'https://maps.apple.com/?address=Gayaza,Kampala,Uganda',
         },
         {
             icon: <Mail className="w-6 h-6" />,
             title: 'Email me',
-            value1: 'hopeliz835@gmail.com',
-            value2: '',
-            href: 'mailto:hopeliz835@gmail.com',
+            value1: 'ssuubigrace08@gmail.com',
+            value2: 'hopeliz835@gmail.com',
+            href1: 'mailto:ssuubigrace08@gmail.com',
+            href2: 'mailto:hopeliz835@gmail.com',
         },
         {
             icon: <Phone className="w-6 h-6" />,
             title: 'Call me',
             value1: '+256 782 331 731',
             value2: '+256 701 055 258',
-            href: 'tel:+256782331731',
+            href1: 'tel:+256782331731',
+            href2: 'tel:+256701055258',
         },
     ];
 
@@ -51,9 +54,8 @@ const Contact = () => {
                     <div className="space-y-12">
                         <div className="space-y-8">
                             {contactLinks.map((item, index) => (
-                                <a
+                                <div
                                     key={index}
-                                    href={item.href}
                                     className="flex items-start gap-6 group"
                                 >
                                     <div className="w-14 h-14 min-w-[3.5rem] bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
@@ -61,10 +63,22 @@ const Contact = () => {
                                     </div>
                                     <div className="pt-1">
                                         <h4 className="text-xl font-black text-blue-600 dark:text-blue-400 mb-1">{item.title}</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 font-bold">{item.value1}</p>
-                                        {item.value2 && <p className="text-slate-600 dark:text-slate-400 font-bold">{item.value2}</p>}
+                                        <a
+                                            href={item.href1}
+                                            className="text-slate-600 dark:text-slate-400 font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors block"
+                                        >
+                                            {item.value1}
+                                        </a>
+                                        {item.value2 && (
+                                            <a
+                                                href={item.href2}
+                                                className="text-slate-600 dark:text-slate-400 font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors block"
+                                            >
+                                                {item.value2}
+                                            </a>
+                                        )}
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
 

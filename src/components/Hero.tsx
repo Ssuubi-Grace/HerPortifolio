@@ -146,7 +146,7 @@ const Hero = () => {
                             </svg>
                         </a>
                         <a
-                            href="/documents/Grace Ssuubi._General_Cv..pdf"
+                            href="/documents/Grace Ssuubi.CV_Gen.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-12 py-5 border-2 border-white/40 text-white hover:bg-white/10 rounded-2xl font-black transition-all transform hover:-translate-y-2 text-lg flex items-center gap-3"

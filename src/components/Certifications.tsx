@@ -18,7 +18,7 @@ const Certifications = () => {
             badge: 'https://cdn.simpleicons.org/ibm'
         },
         {
-            title: 'Digital Awareness & Networking',
+            title: 'Digital Awarenes',
             issuer: 'Cisco Networking Academy',
             year: '2024',
             icon: <ShieldCheck className="w-6 h-6 text-emerald-400" />,
